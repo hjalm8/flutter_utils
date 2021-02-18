@@ -7,15 +7,15 @@ test -f ../pubspec.yaml && echo "Moving to parent dir ../" && cd ..
 test ! -f ./pubspec.yaml && echo "Not in flutter project" && exit 1
 echo "Cleaning..."
 flutter clean
-cd ios
-pod cache clean --all
-cd ..
-echo "Flutter/Cocoapods cleaned"
+# cd ios
+# pod cache clean --all
+# cd ..
+# echo "Flutter/Cocoapods cleaned"
 echo "Reinstalling packages..."
 flutter pub get
-cd ios
-pod update
-cd ..
+# cd ios
+# pod update
+# cd ..
 echo "Done nuking"
 date > .lastnuke
-terminal-notifier -title "Flutter" -message "Nuke is done" -sound Glass
+# terminal-notifier -title "Flutter" -message "Nuke is done" -sound Glass
