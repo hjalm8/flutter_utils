@@ -1,0 +1,3 @@
+# Ad alias ~/PATH_TO_THIS_DIR/script.sh in .bashrc
+alias wireless='wireless.sh'
+alias nuke='flutter_nuke.sh'
