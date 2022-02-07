@@ -5,6 +5,10 @@ test -f app/pubspec.yaml && echo "Moving to flutter dir app/" && cd app
 test -f ../pubspec.yaml && echo "Moving to parent dir ../" && cd ..
 # Check if in Flutter repo root
 test ! -f ./pubspec.yaml && echo "Not in flutter project" && exit 1
+
+echo "Cleaning gradle cache"
+rm -rf ~/.gradle/caches/
+
 echo "Cleaning..."
 flutter clean
 # cd ios
